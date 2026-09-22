@@ -20,13 +20,6 @@ general:
       pgcreds: false
       regcred: false
     useExternalRegistry: false
-  license:
-    activationKey:
-    accepted: false
-    ldapKey:
-    isvdiKey:
-    isvartKey:
-    riskKey:
 db:
   user: postgres
   # DO NOT STORE sensitive data here! See documentation for secure alternatives!
