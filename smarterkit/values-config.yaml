@@ -18,13 +18,6 @@ general:
       pgcerts: false
       pgcreds: false
       regcred: false
-  license:
-    activationKey:
-    accepted: false
-    ldapKey:
-    isvdiKey:
-    isvartKey:
-    riskKey:
 db:
   user: postgres
   password:
