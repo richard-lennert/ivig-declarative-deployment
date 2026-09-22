@@ -70,7 +70,7 @@ office365:
 server:
   options:
   - name: libertyMetrics
-    enabled: false
+    enabled: true
     data:
     - name: userName
       value: null
@@ -82,7 +82,30 @@ server:
     secureSessionCookies: true
     globalHSTS: true
     hideServerVersion: false
-  hostname: null
+  hostname:
+  - k3s.mmfa.ibm.com
+  - 192.168.42.245
   truststore:
   - '@isvgimRootCA.crt'
+  - '@iviawrp.crt'
   keystore: null
+oidc:
+  isc:
+  - scope=openid
+  - discoveryEndpointUrl=https://www.iamlab.ibm.com/isvaop/oauth2/.well-known/openid-configuration
+  - issuerIdentifier=https://www.iamlab.ibm.com
+  - logoffUrl=https://www.iamlab.ibm.com/isvaop/oauth2/rplogout
+  - audiences=isim
+  - pkceCodeChallengeMethod=S256
+  rest:
+  - scope=openid
+  - discoveryEndpointUrl=https://www.iamlab.ibm.com/isvaop/oauth2/.well-known/openid-configuration
+  - issuerIdentifier=https://www.iamlab.ibm.com
+  - logoffUrl=https://www.iamlab.ibm.com/isvaop/oauth2/rplogout
+  - jwtAccessTokenRemoteValidation=require
+  - validationMethod=introspect
+  - inboundPropagation=supported
+  - audiences=isim,isimrestapi
+  - tokenReuse=true
+  - accessTokenCacheTimeout=10s
+
