@@ -1,7 +1,7 @@
 general:
   logging:
-    root-level: "info"
-    json-logging: true
+    root-level: "debug"
+    json-logging: false
   ssl:
     fips: {{ .Values.fips }}
     protocols:
