@@ -1,7 +1,7 @@
 # structure compatible with values.yaml of starterkit unless explicitly noted
 
 namespace: ivig-idm
-timezone: Europe/Budapest
+timezone: Europe/Vienna
 isOpenShift: false
 fips: false
 licenseType: PROCESSOR
@@ -97,9 +97,9 @@ services:
       node: 30943
       hazelcast: 5701
     probes:
-      failureThreshold: 3
+      failureThreshold: 10
       initialDelaySeconds: 60
-      periodSeconds: 10
+      periodSeconds: 15
       successThreshold: 1
       timeoutSeconds: 10
       # EXTRA: failure threshold specifically for startupProbe, defaults to 30
